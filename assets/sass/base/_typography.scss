@@ -3,7 +3,25 @@
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
-
+/*
+_typography.scss 是网站的文字排版系统核心文件，主要实现以下功能：
+1. 基础字体定义 ：
+   - 设置根字体响应式尺寸（16pt → 10pt）
+   - 通过 `breakpoint` 实现跨设备适配
+2. 文本元素规范 ：
+   - 定义标题 h1-h6 的阶梯字号（2.25rem → 0.6rem）
+   - 设置标题大写转换（ text-transform: uppercase ）
+   - 规范段落间距（ _size(element-margin) ）
+3. 特殊文本样式 ：
+   - 链接悬浮过渡动画（ @include vendor('transition', ...) ）
+   - 代码块等宽字体定义（ _font(family-fixed) ）
+   - 引用区块左侧装饰线（ border-left: solid 4px ）
+4. 排版增强功能 ：
+   - 上标/下标位置微调（ position: relative ）
+   - 文本对齐类（ .align-left/center/right ）
+   - 分割线样式（ hr 元素定义）
+该文件通过 `_vars.scss` 调用颜色变量和尺寸参数，与 `main.scss` 中的其他模块共同构建完整的排版体系。
+*/
 /* Type */
 
 	html {

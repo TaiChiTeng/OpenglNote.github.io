@@ -4,6 +4,26 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<!-- 
+`index.html` 是该静态网站的核心入口文件，主要实现以下功能：
+1. 页面框架构建 ：
+   - 声明 HTML5 文档类型
+   - 集成 Dimension 模板 的完整 HTML 结构
+   - 包含 <head> 元数据定义和资源引用
+2. 内容区域划分 ：
+   - 使用语义化标签构建 wrapper 容器（第 13 行）
+   - 定义 header 区域包含 logo 和导航菜单（第 16-33 行）
+   - 通过 <article> 标签组织 Intro/Work/About/Contact 四个内容区块（第 45-196 行）
+3. 资源加载系统 ：
+   - 引入 `main.css` 核心样式表
+   - 加载 `jQuery` 及相关工具库
+   - 集成 `main.js` 实现交互逻辑
+4. 响应式支持 ：
+   - 设置 viewport meta 标签适配移动端（第 9 行）
+   - 包含 noscript 备用样式表（第 11 行）
+   - 通过 is-preload 类名实现预加载状态管理（第 14 行）
+该文件作为网站模板的入口起点，通过哈希路由实现单页导航效果，并与同目录下的样式表、脚本文件共同构成完整的交互式网页体系。
+-->
 <html>
 	<head>
 		<title>Dimension by HTML5 UP</title>
@@ -20,17 +40,35 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<span class="icon fa-gem"></span>
+							<!-- 
+								主页的logo，用于标识网站的品牌或主题。
+								<span class="icon fa-gem"> ：图标，用于展示网站的标志或图标。
+								<img src="images/logo.svg" alt="" /> ：图片，用于展示网站的标志或图标。
+								<svg> ：SVG 元素，用于展示网站的标志或图标。
+								<use xlink:href="images/logo.svg#icon-gem"> ：SVG 元素，用于展示网站的标志或图标。
+							-->
+							<!-- <span class="icon fa-gem"></span> -->
+							<span class="fa-solid fa-face-smile"></span>
 						</div>
 						<div class="content">
 							<div class="inner">
-								<h1>Dimension</h1>
+								<!--
+									主页的标题和简介文本，用于展示网站的主要信息。
+									<h1>维度</h1> ：标题，用于标识网站的名称或主题。
+									<p> ：段落，用于描述网站的主要内容或简介。
+								-->
+								<h1>维度</h1>
 								<p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
 								for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
 							</div>
 						</div>
 						<nav>
 							<ul>
+								<!--
+									导航菜单，用于在网站中导航不同的页面或内容。
+									<li> ：列表项，用于定义导航菜单中的每个选项。
+									<a href="#intro"> ：锚点链接，用于指定导航到特定页面或内容的目标。
+								-->
 								<li><a href="#intro">Intro</a></li>
 								<li><a href="#work">Work</a></li>
 								<li><a href="#about">About</a></li>
@@ -42,7 +80,19 @@
 
 				<!-- Main -->
 					<div id="main">
-
+						<!--
+							文章内容区域，用于展示不同的页面内容。
+							<article id="intro"> ：文章元素，用于定义不同的页面内容块。
+							<h2 class="major"> ：标题，用于标识每个页面内容块的主题。
+							<span class="image main"> ：图片容器，用于展示与页面内容相关的图片。
+							<p> ：段落，用于描述页面内容的详细信息。
+							<a href="#work"> ：锚点链接，用于指定导航到其他页面的目标。
+							<article id="work"> ：文章元素，用于定义不同的页面内容块。
+							<article id="about"> ：文章元素，用于定义不同的页面内容块。
+							<article id="contact"> ：文章元素，用于定义不同的页面内容块。
+							<article id="elements"> ：文章元素，用于定义不同的页面内容块。
+							<article id="elements"> ：文章元素，用于定义不同的页面内容块。
+						-->
 						<!-- Intro -->
 							<article id="intro">
 								<h2 class="major">Intro</h2>

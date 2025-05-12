@@ -3,7 +3,19 @@
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
-
+/*
+_page.scss 是 SASS 样式体系中的基础配置文件，主要实现以下功能：
+1. 视口兼容处理 ：
+   - 通过 @-ms-viewport 确保 IEMobile 的视口宽度适配
+   - 使用 `breakpoint` 保证移动端最小宽度 320px
+2. 盒模型重置 ：
+   - 全局设置 box-sizing: border-box
+   - 通过继承机制确保所有元素统一盒模型
+3. 页面基础样式 ：
+   - 定义 `_palette` 调色板的背景色应用
+   - 处理预加载状态下的动画抑制（ .is-preload 类）
+该文件与同目录下的 `_reset.scss` 共同构成样式初始化体系，并通过 `main.scss` 集成到全局样式。
+*/
 /* Basic */
 
 	// MSIE: Required for IEMobile.

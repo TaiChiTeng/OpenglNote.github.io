@@ -6,7 +6,23 @@
 
 // Reset.
 // Based on meyerweb.com/eric/tools/css/reset (v2.0 | 20110126 | License: public domain)
-
+/*
+_reset.scss 是 SASS 样式体系中的重置文件，主要实现以下功能：
+1. 全局样式清零 ：
+   - 清除所有 HTML 元素的 margin/padding/border （第 10-34 行）
+   - 统一 font-size 和 vertical-align 基准值
+2. HTML5 元素显示定义 ：
+   - 对 article/aside/figure 等 HTML5 元素设置 display: block （第 36-41 行）
+3. 列表样式重置 ：
+   - 移除 ol/ul 的默认列表样式（第 49-51 行）
+   - 清除 blockquote 的引号（第 53-60 行）
+4. 表格优化 ：
+   - 合并表格边框 border-collapse: collapse （第 62-64 行）
+5. 表单控件标准化 ：
+   - 移除 input/select/textarea 的浏览器默认外观（第 76-81 行）
+   - 修复 Firefox 的焦点边框问题（第 71-74 行）
+该文件与 `_page.scss` 共同构成样式初始化体系，通过 `main.scss` 集成到全局样式。
+*/
 	html, body, div, span, applet, object,
 	iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 	pre, a, abbr, acronym, address, big, cite,

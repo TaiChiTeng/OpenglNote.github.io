@@ -3,7 +3,24 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
+/*
+main.js 是该静态网站的核心交互脚本，主要实现以下功能：
+1. 响应式布局管理 ：
+   - 使用 `breakpoints` 定义屏幕断点（1281px、981px等）
+   - 自动处理窗口 resize 事件和移动端 orientation 变化
+2. 文章导航系统 ：
+   - 通过哈希路由实现文章切换（ location.hash ）
+   - $main._show() 和 $main._hide() 方法控制文章显隐动画
+   - 支持 ESC 键关闭文章（keyCode 27 监听）
+3. 浏览器兼容处理 ：
+   - 针对 IE 浏览器修复 flexbox 布局问题
+   - 使用 `browser` 检测浏览器类型
+4. 交互增强功能 ：
+   - 导航栏自动居中布局（当菜单项为偶数时）
+   - 页面滚动位置记忆与恢复
+   - 防止哈希变化导致的页面跳动
+该脚本与同目录下的 `jquery.min.js` 、 `util.js` 共同构成网站的基础交互体系。
+*/
 (function($) {
 
 	var	$window = $(window),
